@@ -1,15 +1,27 @@
 import React from "react";
 
-import Message from "../src";
+import Dropdown from "../src";
 
 export default {
-  title: "Message",
-  component: Message,
+  title: "Dropdown",
+  component: Dropdown,
 };
 
-const Template = (args) => <Message {...args} />;
+const Template = (args) => <Dropdown {...args} />;
 
-export const SimpleLabel = Template.bind({});
-SimpleLabel.args = {
-  label: "Hello, world",
+export const SimpleDropdown = Template.bind({});
+SimpleDropdown.args = {
+  children: (
+    <div>TODO!</div>
+  ),
+  label: "Demo",
+};
+
+export const DisabledDropdown = Template.bind({});
+DisabledDropdown.args = {
+  children: (
+    <div />
+  ),
+  disabled: true,
+  label: "Demo",
 };

@@ -1,9 +1,14 @@
 import React from "react";
 
-export type MessageProps = {
-  label : string;
+export type DropdownProps = {
+  "aria-labelledby" ?: string;
+  children : React.ReactNode;
+  className ?: string;
+  disabled ?: boolean;
+  label : React.ReactNode;
+  role : "listbox" | "menu";
 };
 
-declare const Message: React.FC<MessageProps>;
+declare const Dropdown: React.FC<DropdownProps>;
 
-export default Message;
+export default Dropdown;
