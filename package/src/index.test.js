@@ -50,7 +50,7 @@ describe("Dropdown", () => {
     expect(screen.getByRole("button")).toHaveAttribute("disabled", "");
   });
 
-  it("open the dropdown when button is clicked", () => {
+  it("opens the dropdown when button is clicked", () => {
     render(
       <Dropdown
         label="Toggle menu"
@@ -73,7 +73,30 @@ describe("Dropdown", () => {
     expect(menu).toHaveFocus();
   });
 
-  it("open the dropdown using keyboard / ArrowDown", async () => {
+  it("remains open when user clicks inside the dropdown body", () => {
+    render(
+      <Dropdown
+        label="Toggle menu"
+        role="menu"
+      >
+        <button type="button" data-testid="test-button">Do nothing</button>
+      </Dropdown>
+    );
+
+    const button = screen.getByRole("button");
+
+    userEvent.click(button);
+
+    userEvent.click(screen.getByTestId("test-button"));
+
+    expect(button).toHaveAttribute("aria-expanded", "true");
+
+    const menu = screen.getByRole("menu");
+
+    expect(menu).toBeVisible();
+  });
+
+  it("opens the dropdown using keyboard / ArrowDown", async () => {
     render(
       <Dropdown
         label="Toggle menu"
@@ -102,7 +125,7 @@ describe("Dropdown", () => {
     expect(menu).toHaveFocus();
   });
 
-  it("open the dropdown using keyboard / ArrowUp", async () => {
+  it("opens the dropdown using keyboard / ArrowUp", async () => {
     render(
       <Dropdown
         label="Toggle menu"
@@ -131,7 +154,7 @@ describe("Dropdown", () => {
     expect(menu).toHaveFocus();
   });
 
-  it.skip("close the dropdown when click outside", () => {
+  it("close the dropdown when click outside", () => {
     render(
       <Dropdown
         label="Toggle menu"

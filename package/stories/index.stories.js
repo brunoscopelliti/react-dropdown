@@ -7,12 +7,26 @@ export default {
   component: Dropdown,
 };
 
-const Template = (args) => <Dropdown {...args} />;
+const Template = (args) => {
+  return (
+    <Dropdown {...args} />
+  );
+};
 
 export const SimpleDropdown = Template.bind({});
 SimpleDropdown.args = {
   children: (
-    <div>TODO!</div>
+    <ul>
+      <li>
+        <a href="#account">Account</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#contact">Contact</a>
+      </li>
+    </ul>
   ),
   label: "Demo",
 };
