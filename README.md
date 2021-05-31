@@ -16,11 +16,20 @@ npm i @bscop/react-dropdown
 ## Usage
 
 ```js
-import Component from "@bscop/react-dropdown";
+import Dropdown from "@bscop/react-dropdown";
 
 function App () {
   return (
-    <Component />
+    <Dropdown 
+      label="Menu"
+      role="menu"
+    >
+      <a role="menuitem" href="#">Account</a>
+      <a role="menuitem" href="#">Messages</a>
+      <a role="menuitem" href="#">Settings</a>
+      <hr />
+      <a role="menuitem" href="#logout">Logout</a>
+    </Dropdown>
   );
 }
 ```
