@@ -1,23 +1,53 @@
-.ui-dropdown {
+$borderColor: #ccc;
 
+.ui-dropdown {
   .ui-dd-hook {
     background: none;
     border: 0;
-    cursor: pointer;
     font-size: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ui-dd-hook:not([disabled]) {
+    cursor: pointer;
   }
 
   .ui-dd-box {
     background: #fff;
     color: #000;
-    border: 1px solid #ccc;
+    border: 1px solid $borderColor;
     border-radius: 3px;
-
+    outline: none;
     padding: .2rem .2rem .1rem;
   }
 
   .ui-dd-box:not([hidden]) {
     position: absolute;
+    margin-top: .2rem;
+    padding: .2rem 0;
     z-index: 999;
+  }
+
+  .ui-dd-box hr {
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    border-top: 1px solid $borderColor;
+    margin: .25rem 0;
+  }
+
+  [role="menuitem"] {
+    color: #000;
+    display: block;
+    margin: .05rem 0;
+    padding: .2rem 1rem;
+    text-decoration: none;
+  }
+
+  [role="menuitem"]:focus,
+  [role="menuitem"]:hover {
+    background: #eaeaea;
+    outline: none;
   }
 }

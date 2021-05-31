@@ -16,19 +16,16 @@ const Template = (args) => {
 export const SimpleDropdown = Template.bind({});
 SimpleDropdown.args = {
   children: (
-    <ul>
-      <li>
-        <a href="#account">Account</a>
-      </li>
-      <li>
-        <a href="#about">About</a>
-      </li>
-      <li>
-        <a href="#contact">Contact</a>
-      </li>
-    </ul>
+    <>
+      <a role="menuitem" href="#account">Account</a>
+      <a role="menuitem" href="#about">About</a>
+      <a role="menuitem" href="#contact">Contact</a>
+      <hr />
+      <a role="menuitem" href="#logout">Logout</a>
+    </>
   ),
   label: "Demo",
+  role: "menu",
 };
 
 export const DisabledDropdown = Template.bind({});
