@@ -56,18 +56,18 @@ const DropdownHook =
       <button
         ref={ref}
         {...hookProps}
-        className="ui-dd-hook"
-        id={id}
-        onBlur={onBlur}
-        onClick={show}
-        onFocus={onFocus}
-        type="button"
         aria-expanded={visible || undefined}
         aria-labelledby={
           labelledby
             ? `${labelledby} ${id}`
             : id
         }
+        className="ui-dd-hook"
+        id={id}
+        onBlur={onBlur}
+        onClick={show}
+        onFocus={onFocus}
+        type="button"
       >
         {label}
       </button>
@@ -147,7 +147,7 @@ export default Dropdown;
 const ControlledDropdown = React.forwardRef(
   /**
    * @param {import("./index").ControlledDropdownProps} props
-   * @param {React.RefObject<HTMLDivElement>} maybeRef
+   * @param {React.ForwardedRef<HTMLDivElement>} maybeRef
    */
   (props, maybeRef) => {
     const {

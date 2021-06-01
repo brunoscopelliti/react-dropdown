@@ -19,6 +19,6 @@ export type ControlledDropdownProps = DropdownProps & {
   visible : boolean;
 };
 
-declare const ControlledDropdown: React.ForwardRefExoticComponent<React.RefAttributes<ControlledDropdownProps>>
+declare const ControlledDropdown: React.ForwardRefExoticComponent<ControlledDropdownProps & React.RefAttributes<HTMLDivElement>>;
 
 export { ControlledDropdown };
