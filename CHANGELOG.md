@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.0.2](https://github.com/brunoscopelliti/react-dropdown/compare/v1.0.1...v1.0.2) (2021-06-03)
+
+
+### Bug Fixes
+
+* prevent scroll when arrows up/down are pressed to open dropdown ([cf44ea6](https://github.com/brunoscopelliti/react-dropdown/commits/cf44ea628560d6f70c38d6650c50ec7c82e999d6))
+
 ### [1.0.1](https://github.com/brunoscopelliti/react-dropdown/compare/v1.0.0...v1.0.1) (2021-06-01)
 
 
