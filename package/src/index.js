@@ -33,6 +33,7 @@ Dropdown.propTypes = {
   className: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.node,
+  onBlur: PropTypes.func,
   role: PropTypes.string.isRequired,
 };
 
@@ -51,6 +52,7 @@ const ControlledDropdown = React.forwardRef(
       className,
       disabled,
       label,
+      onBlur,
       role,
       show,
       visible,
@@ -74,6 +76,7 @@ const ControlledDropdown = React.forwardRef(
         <DropdownContent
           aria-activedescendant={activedescendant}
           aria-labelledby={labelledby || buttonId}
+          onBlur={onBlur}
           role={role}
           visible={visible}
         >

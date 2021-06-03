@@ -6,6 +6,7 @@ export type DropdownProps = {
   className ?: string;
   disabled ?: boolean;
   label : React.ReactNode;
+  onBlur ?: () => void;
   role : string;
 };
 
