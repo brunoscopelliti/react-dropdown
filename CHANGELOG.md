@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/brunoscopelliti/react-dropdown/compare/v1.0.2...v1.1.0) (2021-06-03)
+
+
+### Features
+
+* padd onBlur to register listener when dropdown content loses focus ([f76504a](https://github.com/brunoscopelliti/react-dropdown/commits/f76504a92c2c433d25fb040d71401f760e367956))
+
 ### [1.0.2](https://github.com/brunoscopelliti/react-dropdown/compare/v1.0.1...v1.0.2) (2021-06-03)
 
 
