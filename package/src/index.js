@@ -45,6 +45,7 @@ const DropdownHook =
         switch (event.code) {
           case "ArrowDown":
           case "ArrowUp":
+            event.preventDefault();
             show();
             break;
         }
