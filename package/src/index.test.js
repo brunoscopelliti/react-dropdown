@@ -73,6 +73,38 @@ describe("Dropdown", () => {
     expect(menu).toHaveFocus();
   });
 
+  it("renders the dropdown / children()", () => {
+    render(
+      <Dropdown
+        label="Toggle menu"
+        role="menu"
+      >
+        {
+          (close) => {
+            return (
+              <div>
+                Content of the dropdown.
+                <button type="button" data-testid="close" onClick={close}>
+                  Close
+                </button>
+              </div>
+            );
+          }
+        }
+      </Dropdown>
+    );
+
+    const button = screen.getByRole("button");
+
+    userEvent.click(button);
+
+    expect(button).toHaveAttribute("aria-expanded", "true");
+
+    userEvent.click(screen.getByTestId("close"));
+
+    expect(button).not.toHaveAttribute("aria-expanded");
+  });
+
   it("remains open when user clicks inside the dropdown body", () => {
     render(
       <Dropdown

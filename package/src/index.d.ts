@@ -16,6 +16,7 @@ export default Dropdown;
 
 export type ControlledDropdownProps = DropdownProps & {
   "aria-activedescendant" ?: string;
+  hide : () => void;
   show : () => void;
   visible : boolean;
 };

@@ -23,13 +23,22 @@ const Dropdown =
     const ref = useClickOut(hide, visible);
 
     return (
-      <ControlledDropdown {...props} ref={ref} visible={visible} show={show} />
+      <ControlledDropdown
+        {...props}
+        ref={ref}
+        hide={hide}
+        show={show}
+        visible={visible}
+      />
     );
   };
 
 Dropdown.propTypes = {
   "aria-labelledby": PropTypes.string,
-  children: PropTypes.node,
+  children: PropTypes.oneOfType([
+    PropTypes.node,
+    PropTypes.func,
+  ]).isRequired,
   className: PropTypes.string,
   disabled: PropTypes.bool,
   label: PropTypes.node,
@@ -51,6 +60,7 @@ const ControlledDropdown = React.forwardRef(
       children,
       className,
       disabled,
+      hide,
       label,
       onBlur,
       role,
@@ -80,7 +90,11 @@ const ControlledDropdown = React.forwardRef(
           role={role}
           visible={visible}
         >
-          {children}
+          {
+            typeof children == "function"
+              ? children(hide)
+              : children
+          }
         </DropdownContent>
       </div>
     );
@@ -90,8 +104,9 @@ const ControlledDropdown = React.forwardRef(
 ControlledDropdown.propTypes = {
   ...Dropdown.propTypes,
   "aria-activedescendant": PropTypes.string,
-  visible: PropTypes.bool.isRequired,
+  hide: PropTypes.func.isRequired,
   show: PropTypes.func.isRequired,
+  visible: PropTypes.bool.isRequired,
 };
 
 export { ControlledDropdown };
