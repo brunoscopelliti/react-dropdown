@@ -1,6 +1,22 @@
+:root {
+  --main-color: black;
+  --main-bg-color: white;
+
+  --dropdown-border-color: #bababa;
+}
+
 body {
   margin: 0;
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   line-height: normal;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-story-content {
+  padding: .25rem .5rem;
 }

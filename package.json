@@ -87,6 +87,7 @@
     "husky": "^6.0.0",
     "jest": "^27.0.4",
     "node-sass": "^6.0.0",
+    "normalize.css": "^8.0.1",
     "regenerator-runtime": "^0.13.7",
     "rollup": "^2.50.6",
     "standard-version": "^9.3.0",

@@ -1,53 +1,20 @@
-$borderColor: #ccc;
-
 .ui-dropdown {
-  .ui-dd-hook {
+  & > button {
     background: none;
     border: 0;
-    font-size: 1rem;
-    margin: 0;
-    padding: 0;
   }
 
-  .ui-dd-hook:not([disabled]) {
-    cursor: pointer;
-  }
+  [role] {
+    background: var(--main-bg-color);
+    color: var(--main-color);
 
-  .ui-dd-box {
-    background: #fff;
-    color: #000;
-    border: 1px solid $borderColor;
-    border-radius: 3px;
+    border: 1px solid var(--dropdown-border-color, var(--main-color, #000));
     outline: none;
-    padding: .2rem .2rem .1rem;
   }
 
-  .ui-dd-box:not([hidden]) {
+  [role]:not([hidden]) {
     position: absolute;
     margin-top: .2rem;
-    padding: .2rem 0;
     z-index: 999;
-  }
-
-  .ui-dd-box hr {
-    height: 1px;
-    overflow: hidden;
-    border: 0;
-    border-top: 1px solid $borderColor;
-    margin: .25rem 0;
-  }
-
-  [role="menuitem"] {
-    color: #000;
-    display: block;
-    margin: .05rem 0;
-    padding: .2rem 1rem;
-    text-decoration: none;
-  }
-
-  [role="menuitem"]:focus,
-  [role="menuitem"]:hover {
-    background: #eaeaea;
-    outline: none;
   }
 }

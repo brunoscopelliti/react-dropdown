@@ -34,6 +34,18 @@ function App () {
 }
 ```
 
+### CSS Custom properties
+
+You can set the following CSS Custom properties to customize the look of the dropdown component:
+
+```css
+:root {
+  --main-color: black;
+  --main-bg-color: white;
+  --dropdown-border-color: #bababa;
+}
+```
+
 ## Contribute
 
 Read the [guidelines](./CONTRIBUTING.md).

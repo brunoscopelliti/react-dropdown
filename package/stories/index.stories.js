@@ -16,13 +16,9 @@ const Template = (args) => {
 export const SimpleDropdown = Template.bind({});
 SimpleDropdown.args = {
   children: (
-    <>
-      <a role="menuitem" href="#account">Account</a>
-      <a role="menuitem" href="#about">About</a>
-      <a role="menuitem" href="#contact">Contact</a>
-      <hr />
-      <a role="menuitem" href="#logout">Logout</a>
-    </>
+    <div className="dropdown-story-content">
+      Hello, world!
+    </div>
   ),
   label: "Demo",
   role: "menu",
