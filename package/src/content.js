@@ -32,6 +32,7 @@ const DropdownContent =
 DropdownContent.propTypes = {
   children: PropTypes.node.isRequired,
   onBlur: PropTypes.func,
+  onKeyDown: PropTypes.func,
   role: PropTypes.string.isRequired,
   visible: PropTypes.bool.isRequired,
 };

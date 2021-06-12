@@ -6,7 +6,8 @@ export type DropdownProps = {
   className ?: string;
   disabled ?: boolean;
   label : React.ReactNode;
-  onBlur ?: () => void;
+  onBlur ?: (event : React.FocusEvent) => void;
+  onKeyDown ?: (event : React.KeyboardEvent) => void;
   role : string;
 };
 

@@ -43,10 +43,9 @@ Dropdown.propTypes = {
   disabled: PropTypes.bool,
   label: PropTypes.node,
   onBlur: PropTypes.func,
+  onKeyDown: PropTypes.func,
   role: PropTypes.string.isRequired,
 };
-
-export default Dropdown;
 
 const ControlledDropdown = React.forwardRef(
   /**
@@ -63,6 +62,7 @@ const ControlledDropdown = React.forwardRef(
       hide,
       label,
       onBlur,
+      onKeyDown,
       role,
       show,
       visible,
@@ -87,6 +87,7 @@ const ControlledDropdown = React.forwardRef(
           aria-activedescendant={activedescendant}
           aria-labelledby={labelledby || buttonId}
           onBlur={onBlur}
+          onKeyDown={onKeyDown}
           role={role}
           visible={visible}
         >
@@ -108,5 +109,7 @@ ControlledDropdown.propTypes = {
   show: PropTypes.func.isRequired,
   visible: PropTypes.bool.isRequired,
 };
+
+export default Dropdown;
 
 export { ControlledDropdown };
