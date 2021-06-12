@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.3.0](https://github.com/brunoscopelliti/react-dropdown/compare/v1.2.1...v1.3.0) (2021-06-12)
+
+
+### Features
+
+* add possibility to listen keyDown on dropdown content ([0b1f2b6](https://github.com/brunoscopelliti/react-dropdown/commits/0b1f2b69271b83213fe6525721ab8328eb3a3f4f))
+
 ### [1.2.1](https://github.com/brunoscopelliti/react-dropdown/compare/v1.2.0...v1.2.1) (2021-06-07)
 
 
