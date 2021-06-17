@@ -4,6 +4,10 @@
     border: 0;
   }
 
+  & > button:not([disabled]) {
+    cursor: pointer;
+  }
+
   & > [role]:not([hidden]) {
     background: var(--main-bg-color);
     border: 1px solid var(--dropdown-border-color, var(--main-color, #000));
