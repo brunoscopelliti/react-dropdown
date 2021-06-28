@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://github.com/brunoscopelliti/react-dropdown/compare/v1.3.1...v1.4.0) (2021-06-28)
+
+
+### Features
+
+* dropdown accepts ref ([96d9906](https://github.com/brunoscopelliti/react-dropdown/commits/96d990634f12c344949836074946fe18d54785e6))
+
 ### [1.3.1](https://github.com/brunoscopelliti/react-dropdown/compare/v1.3.0...v1.3.1) (2021-06-17)
 
 
