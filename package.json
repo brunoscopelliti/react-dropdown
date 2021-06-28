@@ -101,7 +101,7 @@
   "dependencies": {
     "@bscop/css-class": "^1.0.0",
     "@bscop/use-bool": "^1.0.1",
-    "@bscop/use-click-out": "^1.0.6",
+    "@bscop/use-click-out": "^1.1.0",
     "@bscop/use-forward-ref": "^1.0.2",
     "@bscop/use-id": "^2.0.0"
   }

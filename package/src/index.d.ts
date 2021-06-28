@@ -11,7 +11,7 @@ export type DropdownProps = {
   role : string;
 };
 
-declare const Dropdown: React.FC<DropdownProps>;
+declare const Dropdown: React.ForwardRefExoticComponent<DropdownProps & React.RefAttributes<HTMLDivElement>>;
 
 export default Dropdown;
 

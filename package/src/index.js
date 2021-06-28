@@ -11,16 +11,21 @@ import useForwardRef from "@bscop/use-forward-ref";
 import DropdownContent from "./content";
 import DropdownHook from "./hook";
 
-const Dropdown =
-  (props) => {
+const Dropdown = React.forwardRef(
+  /**
+   * @param {import("./index").DropdownProps} props
+   * @param {React.ForwardedRef<HTMLDivElement>} maybeRef
+   */
+  function Dropdown (props, maybeRef) {
     const [visible, show, hide] = useBool();
 
     /**
      * When it is used as dropdown menu the
      * dropdown content should be closed as soon
      * as the user clicks outside the wrapper.
+     * @type React.RefObject<HTMLDivElement>
      */
-    const ref = useClickOut(hide, visible);
+    const ref = useClickOut(hide, { active: visible, ref: maybeRef });
 
     return (
       <ControlledDropdown
@@ -31,7 +36,8 @@ const Dropdown =
         visible={visible}
       />
     );
-  };
+  }
+);
 
 Dropdown.propTypes = {
   "aria-labelledby": PropTypes.string,
@@ -52,7 +58,7 @@ const ControlledDropdown = React.forwardRef(
    * @param {import("./index").ControlledDropdownProps} props
    * @param {React.ForwardedRef<HTMLDivElement>} maybeRef
    */
-  (props, maybeRef) => {
+  function ControlledDropdown (props, maybeRef) {
     const {
       "aria-labelledby": labelledby,
       "aria-activedescendant": activedescendant,
